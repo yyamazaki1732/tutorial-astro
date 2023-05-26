@@ -1,3 +1,6 @@
+$header: 80px;
+$footer: 180px;
+
 body {
   background-color: paleturquoise;
   min-height: 100vh;
@@ -6,13 +9,23 @@ body {
 
 header {
   background-color: palegoldenrod;
+  place-items: center left;
+  display: grid;
+  height: $header;
 }
 
 main {
   width: min(60%, 1280px);
-  min-height: 50vh;
+  height: calc(100vh - $footer - $header);
   margin: 0 auto;
   background-color: palegreen;
+}
+
+.settings-language {
+  margin-top: 40px;
+}
+.heading {
+  margin-top: 32px;
 }
 
 .languagePiker {
@@ -32,6 +45,7 @@ main {
 }
 
 footer {
+  height: $footer;
   padding: 1rem 5em;
   background-color: palegoldenrod;
 }
