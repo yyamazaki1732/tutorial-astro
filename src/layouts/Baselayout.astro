@@ -10,12 +10,7 @@ const { pageTitle } = Astro.props;
 import { getLangFromUrl } from "src/i18n/utils";
 const lang = getLangFromUrl(Astro.url);
 
-const langtype = [
-  { href: "en", type: "en" },
-  { href: "ja", type: "ja" },
-  { href: "fr", type: "fr" },
-  { href: "x-default", type: "en" },
-];
+const langtype = ["en", "ja", "fr", "x-default"];
 ---
 
 <html lang={lang}>
@@ -28,8 +23,8 @@ const langtype = [
       langtype.map((value) => {
         <link
           rel="alternate"
-          hreflang={value.href}
-          href={`https://tutorial-of-astro.netlify.app/${value.type}/`}
+          hreflang={value}
+          href={`https://tutorial-of-astro.netlify.app/${lang}/`}
         />;
       })
     }
