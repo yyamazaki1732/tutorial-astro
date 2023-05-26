@@ -6,6 +6,7 @@ const t = useTranslations(lang);
 ---
 
 <BaseLayout pageTitle={t("title.top")}>
-  <h2>{t("heading.top")}</h2>
+  <div class="settings-language">language : {t("lang.top")}</div>
+  <h2 class="heading">{t("heading.top")}</h2>
   <h3>{t("common.top")}</h3>
 </BaseLayout>
