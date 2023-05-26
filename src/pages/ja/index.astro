@@ -1,0 +1,13 @@
+---
+import BaseLayout from "@layouts/Baselayout.astro";
+const pageTitle = "Home Page";
+
+import { getLangFromUrl, useTranslations } from "src/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <h2>日本語　My awesome blog blog subtitle{t("nav.home")}</h2>
+</BaseLayout>
