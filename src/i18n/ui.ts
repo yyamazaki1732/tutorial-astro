@@ -8,16 +8,16 @@ export const defaultLang = "en";
 
 export const ui = {
   en: {
-    "nav.home": "Home",
-    "nav.about": "About",
-    "nav.twitter": "Twitter",
+    "title.top": "Home Page",
+    "heading.top": "My awesome blog subtitle",
+    "common.top": "common area",
   },
   ja: {
-    "nav.home": "富士山",
-    "nav.about": "À propos",
+    "title.top": "ホームページ",
+    "heading.top": "私のブログ",
   },
   fr: {
-    "nav.home": "Acceuil",
-    "nav.about": "À propos",
+    "title.top": "hōmupēji",
+    "heading.top": "Mon blog génial sous-titre",
   },
 } as const;
