@@ -24,17 +24,15 @@ const langtype = [
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-
     {
       langtype.map((value) => {
         <link
           rel="alternate"
           hreflang={value.href}
-          href=`https://tutorial-of-astro.netlify.app/${value.type}/`
+          href={`https://tutorial-of-astro.netlify.app/${value.type}/`}
         />;
       })
     }
-
     <title>{pageTitle}</title>
   </head>
   <body>
