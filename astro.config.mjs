@@ -2,7 +2,12 @@ import { defineConfig } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
-  base: process.env.NODE_ENV === "internal" ? "/test" : "",
+  base:
+    process.env.NODE_ENV === "development"
+      ? "/"
+      : process.env.NODE_ENV === "production"
+      ? "/test/"
+      : null,
   compressHTML: true,
   vite: {
     build: {
