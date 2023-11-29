@@ -1,0 +1,43 @@
+---
+const links = [
+  ["Company", "About Us", "Blog", "Careers", "Contact Us"],
+  ["Support", "Help Center", "Safety Center", "Community"],
+  ["Legal", "Cookies Policy", "Privacy Policy", "Terms of Service"],
+];
+
+const sns = ["facebook", "twitter", "youtube", "instagram"];
+---
+
+<footer class="py-16 pb-6">
+  <div class="flex gap-x-32">
+    {
+      links.map((link) => {
+        return (
+          <ul class="flex flex-col gap-y-4">
+            {link.map((sublink, index) => {
+              return (
+                <li class:list={["", { "font-bold": index === 0 }]}>
+                  {sublink}
+                </li>
+              );
+            })}
+          </ul>
+        );
+      })
+    }
+  </div>
+  <div class="flex justify-between pt-6 mt-14 border-t border-red-500">
+    <small>© 2020 - All rights reserved</small>
+    <ul class="flex">
+      {
+        sns.map((icon) => {
+          return (
+            <li>
+              <img src={`/img/${icon}.svg`} alt="" />
+            </li>
+          );
+        })
+      }
+    </ul>
+  </div>
+</footer>

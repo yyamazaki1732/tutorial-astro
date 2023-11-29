@@ -1,6 +1,6 @@
 ---
-import BaseLayout from "../../layouts/Baselayout.astro";
-import BlogPost from "../../components/BlogPost.astro";
+import BaseLayout from "../layouts/Baselayout.astro";
+import BlogPost from "../components/pages/blog/BlogPost.astro";
 const allPosts = await Astro.glob("../../content/blog/*.md");
 const pageTitle = "Blog Page";
 ---

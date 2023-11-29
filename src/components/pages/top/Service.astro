@@ -1,0 +1,26 @@
+---
+import ServiceCard from "@components/parts/ServiceCard.astro";
+
+const cardText = [
+  "Our platform offers a straightforward and effective way for individuals to master the essential skills of great managers.",
+  "Easily and effectively acquire the necessary skills to become an exceptional manager through our platform.",
+  "Unleash your full potential as a manager by utilizing our platform to learn and develop crucial skills.",
+];
+---
+
+<section class="px-4 max-w-screen-lg mx-auto flex py-16">
+  <div>
+    <h2 class="text-3xl font-bold">SERVICES</h2>
+    <ul class="flex gap-x-4 mt-3">
+      {
+        cardText.map((card, index) => {
+          return (
+            <li>
+              <ServiceCard cardText={cardText[index]} />
+            </li>
+          );
+        })
+      }
+    </ul>
+  </div>
+</section>

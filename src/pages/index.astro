@@ -1,12 +1,10 @@
 ---
-import { tuple } from "astro/zod";
-const isProduction = import.meta.env.NODE_ENV === "production" ? true : false;
+import BaseLayout from "@layouts/Baselayout.astro";
+import FV from "@components/pages/top/FV.astro";
+import Service from "@components/pages/top/Service.astro";
 ---
 
-{
-  isProduction == true ? (
-    <meta http-equiv="refresh" content="0; url=/test/en/" />
-  ) : (
-    <meta http-equiv="refresh" content="0; url=/en/" />
-  )
-}
+<BaseLayout>
+  <FV />
+  <Service />
+</BaseLayout>

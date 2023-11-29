@@ -1,0 +1,30 @@
+{
+  "colors": {
+    "white": {
+      "value": "#fff",
+      "type": "color"
+    },
+    "black": {
+      "value": "#000",
+      "type": "color"
+    },
+    "red": {
+      "value": "#d0021b",
+      "type": "color"
+    }
+  },
+  "spacing": {
+    "4": {
+      "value": "40",
+      "type": "spacing"
+    },
+    "8": {
+      "value": "8",
+      "type": "spacing"
+    },
+    "12": {
+      "value": "12",
+      "type": "spacing"
+    }
+  }
+}
