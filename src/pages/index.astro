@@ -1,4 +1,12 @@
 ---
+import { tuple } from "astro/zod";
+const isProduction = import.meta.env.NODE_ENV === "production" ? true : false;
 ---
 
-<meta http-equiv="refresh" content="0; url=/en/" />
+{
+  isProduction == true ? (
+    <meta http-equiv="refresh" content="0; url=/test/en/" />
+  ) : (
+    <meta http-equiv="refresh" content="0; url=/en/" />
+  )
+}

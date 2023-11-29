@@ -8,9 +8,16 @@ export default defineConfig({
       : process.env.NODE_ENV === "production"
       ? "/test/"
       : null,
-  compressHTML: true,
+  compressHTML: false,
+  outDir: "./my-custom-build-directory",
+  server: { port: 1234, host: true },
   vite: {
     build: {
+      buildOptions: {
+        env: {
+          NODE_ENV: process.env.NODE_ENV,
+        },
+      },
       rollupOptions: {
         output: {
           entryFileNames: "entry.js",
