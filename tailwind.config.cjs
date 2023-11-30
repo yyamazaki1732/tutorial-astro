@@ -1,12 +1,12 @@
 /** @type {import('tailwindcss').Config} */
-import { core } from "./data/tokens.json";
+const Style = require("./plugins/editValue.js").Style;
 
 module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
       colors: {
-        primary: core.colors.black.value,
+        primary: Style.colors.black.value,
       },
     },
   },
