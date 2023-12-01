@@ -1,5 +1,18 @@
 ---
-
+const links = [
+  {
+    path: "/",
+    text: "Home",
+  },
+  {
+    path: "/about",
+    text: "About",
+  },
+  {
+    path: "/blog",
+    text: "Blog",
+  },
+];
 ---
 
 <header class="px-4 font-bold py-9">
@@ -7,10 +20,20 @@
     class="flex gap-x-4 max-w-screen-lg justify-between mx-auto text-2xl w-full"
   >
     <h1>COMPANY</h1>
-    <div class="flex gap-x-4">
-      <a href="/">Home</a>
-      <a href="/about/">About</a>
-      <a href="/blog/">Blog</a>
+    <div class="flex items-center gap-x-4">
+      {
+        links.map((link) => {
+          return (
+            <a class="text-text-accent" href={link.path}>
+              {link.text}
+            </a>
+          );
+        })
+      }
+
+      <a href="#!" class="bg-surface-primary py-3 px-4 w-max text-gray-100"
+        >View More</a
+      >
     </div>
   </nav>
 </header>
